@@ -4,11 +4,15 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <h1>My blog</h1>
+
+    <FontAwesomeIcon icon={faCoffee} />
     <h4>{data.allMarkdownRemark.totalCount} Post</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
@@ -34,7 +38,7 @@ export const query = graphql`
               title
               date(formatString: "DD MMMM, YYYY")
             }
-            
+            excerpt
           }
         }
       }

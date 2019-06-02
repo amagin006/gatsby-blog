@@ -1,18 +1,18 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styles from "./header.module.css";
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styles from "./header.module.css"
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <div>
     <div>
       <h1 className={styles.title}>
-        <Link>
+        <Link to="/">
           {siteTitle}
         </Link>
       </h1>
     </div>
-  </header>
+  </div>
 )
 
 Header.propTypes = {
