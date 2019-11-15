@@ -22,6 +22,14 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    date
+                    thumbnail {
+                      childImageSharp {
+                        sizes(maxWidth: 630) {
+                          src
+                        }
+                      }
+                    }
                   }
                 }
               }

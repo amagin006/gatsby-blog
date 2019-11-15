@@ -1,9 +1,10 @@
 ---
 title: "My second Post"
 date: "2019-11-09"
+thumbnail: ./tvb_0109.jpg
 ---
 
-![img](./tvb_0109.jpg)
+![img](./Shota_6097-01.jpeg)
 
 ## This is h2
 
