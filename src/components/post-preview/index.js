@@ -13,7 +13,6 @@ class PostPreview extends React.Component {
       excerpt,
       thumbnail,
     } = this.props.post;
-
     return (
       <article key={slug} className={styles.content}>
         <Link className={styles.title_link} to={slug}>

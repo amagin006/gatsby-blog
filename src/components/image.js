@@ -2,8 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-
-export default ({ filename, alt, }) => (
+const Image = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -13,7 +12,7 @@ export default ({ filename, alt, }) => (
               relativePath
               name
               childImageSharp {
-                sizes(maxWidth: 800) {
+                sizes(maxWidth: 600) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -24,21 +23,19 @@ export default ({ filename, alt, }) => (
     `}
 
     render={(data) => {
-      const image = data.images.edges.find(n =>
-        n.node.relativePath.includes(filename)
-      )
+      const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(props.filename);
+      });
+      if (!image) { return null; }
 
-      if (!image) {
-        return null
-      }
-
-      const imageSizes = image.node.childImageSharp.sizes
+      const imageSizes = image.node.childImageSharp.sizes;
       return (
         <Img
-          alt={alt}
+          alt={props.alt}
           sizes={imageSizes}
         />
       );
     }}
   />
 )
+export default Image
