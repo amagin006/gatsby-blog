@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import PostPreveiew from '../post-preview'
-import './index.module.css'
+import "./index.module.css"
 
 class Postlist extends React.Component {
   getPostList() {
@@ -22,12 +22,12 @@ class Postlist extends React.Component {
     const postList = this.getPostList();
     return (
       <div className="grid">
-      {postList.map( post => (
-        <PostPreveiew
-          key={post.id}
-          post={post} 
-        />
-      ))}
+        {postList.map(post => (
+          <PostPreveiew
+            key={post.id}
+            post={post}
+          />
+        ))}
       </div>
     );
   }
