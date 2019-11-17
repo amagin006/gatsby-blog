@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby'
 
 import Image from '../image';
-import styles from './ index.css';
+import styles from './index.css';
 
 class PostPreview extends React.Component {
   render() {
