@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import PostPreveiew from '../post-preview'
-import "./index.module.css"
+import "./index.css"
 
 class Postlist extends React.Component {
   getPostList() {
