@@ -1,20 +1,17 @@
 import React from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { graphql } from 'gatsby'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from "../components/layout/"
-// import Image from "../components/image"
+import Hero from "../components/hero"
 import PostList from "../components/post-list"
 import SEO from "../components/seo"
 
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <FontAwesomeIcon icon={faCoffee} />
-    <h1>My blog</h1>
+    <Hero />
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-    <PostList postEdges={data.allMarkdownRemark.edges}/>
+    <PostList postEdges={data.allMarkdownRemark.edges} />
   </Layout>
 )
 
