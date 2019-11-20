@@ -2,21 +2,30 @@ import React from "react"
 import { graphql } from 'gatsby'
 
 import Layout from "../components/layout/"
-import Hero from "../components/hero"
 import PostList from "../components/post-list"
 import SEO from "../components/seo"
 
-export default ({ data }) => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-    <PostList postEdges={data.allMarkdownRemark.edges} />
-  </Layout>
-)
+class BlogIndex extends React.Component {
+  render() {
+    return (
+      <Layout title={this.props.data.site.siteMetadata.title} location={this.props.location}>
+        <SEO title="Home" />
+        <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
+        <PostList postEdges={this.props.data.allMarkdownRemark.edges} />
+      </Layout>
+    )
+  }
+}
+
+export default BlogIndex;
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark {
       totalCount
       edges {
