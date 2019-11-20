@@ -9,7 +9,6 @@ import styles from './layout.module.scss'
 const Layout = ({ title, location, children }) => {
   let hero;
   let rootPath = `/`;
-
   const isRoot = location.pathname === rootPath;
   if (isRoot) {
     hero = (
