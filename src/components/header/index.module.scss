@@ -1,0 +1,18 @@
+.header {
+  background-color: #a4cc89;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+}
+
+.headerWrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  padding: 16px;
+
+  a {
+    color: #fff;
+  }
+}
