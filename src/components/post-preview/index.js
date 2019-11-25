@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby'
 
 import Image from '../image';
-import styles from './index.css';
+import styles from './index.module.scss';
 
 class PostPreview extends React.Component {
   render() {
@@ -15,15 +15,15 @@ class PostPreview extends React.Component {
 
     return (
       <article key={slug} className={styles.content}>
-        <Link className={styles.title_link} to={slug}>
-          <div className={styles.content_thumbnail}>
+        <Link className={styles.postBlock} to={slug}>
+          <div className={styles.postTumbnailBox}>
             <Image
-              className={styles.content_thumbnail_image}
+              className={styles.postTumbnailimage}
               filename={thumbnail.name}
               alt={'thumbnail'}
             />
           </div>
-          <div className={styles.content_post_info}>
+          <div className={styles.postContent}>
             <h3 className={styles.title} >
               {title}
             </h3>

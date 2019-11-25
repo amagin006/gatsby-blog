@@ -10,7 +10,6 @@ class BlogIndex extends React.Component {
     return (
       <Layout title={this.props.data.site.siteMetadata.title} location={this.props.location}>
         <SEO title="Home" />
-        <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
         <PostList postEdges={this.props.data.allMarkdownRemark.edges} />
       </Layout>
     )
@@ -27,7 +26,6 @@ export const query = graphql`
       }
     }
     allMarkdownRemark {
-      totalCount
       edges {
         node {
           id
@@ -41,7 +39,7 @@ export const query = graphql`
               name
             }
           }
-          excerpt
+          excerpt(truncate: true, pruneLength: 100)
         }
       }
     }

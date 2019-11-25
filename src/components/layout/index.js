@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 
 import Footer from '../footer'
 import Header from '../header'
+import Sidebar from '../sidebar'
 import styles from './layout.module.scss'
 
 const Layout = ({ title, location, children }) => {
@@ -29,7 +30,10 @@ const Layout = ({ title, location, children }) => {
       <Header siteTitle={title} />
       <div className={styles.bodyWrapper}>
         {hero}
-        <main>{children}</main>
+        <div className={styles.bodyContainer}>
+          <main>{children}</main>
+          <aside><Sidebar /></aside>
+        </div>
       </div>
       <Footer />
     </>

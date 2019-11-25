@@ -14,6 +14,20 @@ main {
   padding-top: 0;
 }
 
+.bodyContainer {
+  display: flex;
+}
+
+main {
+  width: 67%;
+  margin-right: 3%;
+}
+
+aside {
+  width: 30%;
+  background: #333333;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
