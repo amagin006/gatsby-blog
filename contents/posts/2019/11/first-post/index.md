@@ -1,6 +1,7 @@
 ---
 title: 'My 1st Post'
 date: '2019-01-21'
+tags: ["etc"]
 thumbnail: ./IMGP5090.jpg
 ---
 

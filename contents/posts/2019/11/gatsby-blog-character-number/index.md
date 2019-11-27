@@ -1,6 +1,7 @@
 ---
 title: 'Gatsby blogの抜粋の文字数を変更'
 date: '2019-11-24'
+tags: ["Gatsby", "React"]
 thumbnail: ./2019112402.jpg
 ---
 

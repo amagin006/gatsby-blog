@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
+import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout/"
 import PostList from "../components/post-list"
 import SEO from "../components/seo"
@@ -11,6 +12,15 @@ class BlogIndex extends React.Component {
       <Layout title={this.props.data.site.siteMetadata.title} location={this.props.location}>
         <SEO title="Home" />
         <PostList postEdges={this.props.data.allMarkdownRemark.edges} />
+        <ul>
+          {this.props.data.allMarkdownRemark.group.map(tag => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount})
+          </Link>
+            </li>
+          ))}
+        </ul>
       </Layout>
     )
   }
@@ -41,6 +51,10 @@ export const query = graphql`
           }
           excerpt(truncate: true, pruneLength: 100)
         }
+      }
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
   }

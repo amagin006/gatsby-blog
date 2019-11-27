@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-size: 1.6rem;
+  font-family: Rubik, sans-serif;
 }
 
 main {
@@ -25,7 +26,6 @@ main {
 
 aside {
   width: 30%;
-  background: #333333;
 }
 
 hr {
@@ -43,6 +43,10 @@ a {
   background-color: transparent;
   text-decoration: none;
   color: #333333;
+}
+
+li {
+  list-style: none;
 }
 
 sub,
