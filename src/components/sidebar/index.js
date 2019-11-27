@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faTag } from '@fortawesome/free-solid-svg-icons'
 import kebabCase from 'lodash/kebabCase'
 
@@ -28,7 +29,7 @@ export default () => (
                 to={`/tags/${kebabCase(tag.fieldValue)}/`}
                 className={styles.tagText}
               >
-                <FontAwesomeIcon className={styles.tagIcon} icon={faTag} />{tag.fieldValue} ({tag.totalCount})
+                <FontAwesomeIcon className={styles.tagIcon} size="2x" icon={faTag} />{tag.fieldValue} ({tag.totalCount})
               </Link>
             </li>
           ))}
