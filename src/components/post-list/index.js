@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 import PostPreveiew from '../post-preview'
-import "./index.module.scss"
+import styles from "./index.module.scss"
 
 class Postlist extends React.Component {
   getPostList() {
@@ -21,7 +21,7 @@ class Postlist extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div className="postWrapper">
+      <div className={styles.postWrapper}>
         {postList.map(post => (
           <PostPreveiew
             key={post.id}

@@ -10,7 +10,8 @@ class PostPreview extends React.Component {
       slug,
       title,
       excerpt,
-      thumbnail
+      thumbnail,
+      date
     } = this.props.post;
 
     return (
@@ -24,6 +25,7 @@ class PostPreview extends React.Component {
             />
           </div>
           <div className={styles.postContent}>
+            <div className={styles.postDate}>{date}</div>
             <h3 className={styles.title} >
               {title}
             </h3>

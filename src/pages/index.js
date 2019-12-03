@@ -14,14 +14,14 @@ class BlogIndex extends React.Component {
         <PostList postEdges={this.props.data.allMarkdownRemark.edges} />
         <ul>
           {this.props.data.allMarkdownRemark.group.map(tag => (
-            <li key={tag.fieldValue}>
+            <li key={tag.fieldValue} >
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})
-          </Link>
+              </Link>
             </li>
           ))}
         </ul>
-      </Layout>
+      </Layout >
     )
   }
 }
@@ -44,12 +44,12 @@ export const query = graphql`
           }
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "YYYY/MM/DD")
             thumbnail {
               name
             }
           }
-          excerpt(truncate: true, pruneLength: 100)
+          excerpt(truncate: true, pruneLength: 60)
         }
       }
       group(field: frontmatter___tags) {
