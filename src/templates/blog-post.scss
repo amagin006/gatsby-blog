@@ -1,0 +1,79 @@
+h1 {}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 20px 0;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 2.6rem;
+  margin: 40px 0;
+  padding: 20px;
+  background: #d5d5d5;
+}
+
+h4 {
+  font-size: 2.2rem;
+  border-left: 4px solid #2a8c21;
+  border-bottom: 1px solid #9b9b9b;
+  padding: 10px 0 10px 20px;
+  margin: 40px 0;
+}
+
+li::before {
+  content: "-";
+  padding-right: 8px;
+  color: #3c3c3c;
+}
+
+.post-date {
+  font-size: 1.4rem;
+  margin: 0 0 20px 10px;
+  border-bottom: 1px dotted #a5a5a5;
+  display: inline-block;
+}
+
+
+code {
+  font-size: 1.4rem;
+  font-family: monospace, sans-serif;
+  line-height: 24px;
+  background: #373737;
+  color: #fff;
+  margin: 0 3px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  overflow-wrap: break-word;
+}
+
+pre {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  border-radius: 4px;
+  overflow: auto;
+  overflow-y: hidden;
+  font-size: 12px;
+  background: #373737;
+  padding: 36px 10px 10px 10px;
+  color: #ffffff;
+}
+
+.prev::before,
+.next::before {
+  content: none;
+}
+
+.language-GraphQL::before {
+  content: 'GraphQL';
+  position: absolute;
+  top: 0;
+  left: 14px;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  background: #8275b6;
+  color: #ffffff;
+}

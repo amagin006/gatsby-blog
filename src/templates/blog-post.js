@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import './blog-post.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -12,22 +15,21 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p>
+        <h2>{post.frontmatter.title}</h2>
+        <FontAwesomeIcon icon={faFlag} /><p className="post-date">
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-
+        <hr />
         <ul>
-          <li>
+          <li className="prev">
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li className="next">
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
