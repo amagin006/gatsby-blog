@@ -1,4 +1,6 @@
 import React from "react"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 import PropTypes from "prop-types"
 // Components
@@ -10,7 +12,7 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
     } tagged with "${tag}"`
   return (
-    <div>
+    <Layout>
       <h2>{tagHeader}</h2>
       <ul>
         {edges.map(({ node }) => {
@@ -24,7 +26,7 @@ const Tags = ({ pageContext, data }) => {
         })}
       </ul>
       <Link to="/tags">All tags</Link>
-    </div>
+    </Layout>
   )
 }
 Tags.propTypes = {
