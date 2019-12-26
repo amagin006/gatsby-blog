@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from '../components/layout'
-// import SEO from '../components/seo'
 
 import PropTypes from "prop-types"
 // Components
@@ -12,7 +11,7 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
     } tagged with "${tag}"`
   return (
-    <Layout>
+    <div>
       <h2>{tagHeader}</h2>
       <ul>
         {edges.map(({ node }) => {
@@ -26,7 +25,7 @@ const Tags = ({ pageContext, data }) => {
         })}
       </ul>
       <Link to="/tags">All tags</Link>
-    </Layout>
+    </div>
   )
 }
 Tags.propTypes = {
@@ -54,6 +53,11 @@ Tags.propTypes = {
 export default Tags
 export const pageQuery = graphql`
   query($tag: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
