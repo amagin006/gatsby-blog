@@ -1,6 +1,7 @@
 .postBlock {
-  padding: 20px 0;
-  display: flex;
+  display: block;
+  margin-bottom: 20px;
+  padding: 0 0 20px 0;
   transition: all 0.3s;
   border-bottom: 1px solid #cecece;
 
@@ -9,8 +10,8 @@
   }
 
   .postTumbnailBox {
-    width: 30%;
-    margin-right: 3%;
+    width: 100%;
+    margin-bottom: 10px;
 
     img {
       width: 100%;
@@ -18,13 +19,11 @@
   }
 
   .postContent {
-    width: 67%;
-    padding-right: 10px;
-    min-height: 145px;
 
     h3 {
-      margin-top: 20px;
-      margin-bottom: 10px;
+      margin: 10px 0;
+      padding: 0;
+      background: none;
       font-size: 1.7rem;
     }
 
@@ -38,4 +37,31 @@
     font-size: 1.3rem;
     color: #8e8e8e;
   }
+}
+
+@media screen and (min-width: 600px) {
+  .postBlock {
+    display: flex;
+    padding: 20px 0;
+    margin-bottom: 0;
+
+    .postTumbnailBox {
+      width: 30%;
+      margin-right: 3%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .postContent {
+      width: 67%;
+      padding-right: 10px;
+
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  }
+
 }

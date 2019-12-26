@@ -1,7 +1,7 @@
 h1 {}
 
 h2 {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 600;
   margin: 20px 0;
   line-height: 1.4;
@@ -40,7 +40,7 @@ code {
   font-size: 1.4rem;
   font-family: monospace, sans-serif;
   line-height: 24px;
-  background: #373737;
+  background: #343232;
   color: #fff;
   margin: 0 3px;
   border-radius: 4px;
@@ -57,7 +57,7 @@ pre {
   overflow: auto;
   overflow-y: hidden;
   font-size: 12px;
-  background: #373737;
+  background: #343232;
   padding: 36px 10px 10px 10px;
   color: #ffffff;
 }
@@ -76,4 +76,11 @@ pre {
   font-size: 1.4rem;
   background: #8275b6;
   color: #ffffff;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 4rem;
+  }
+
 }
