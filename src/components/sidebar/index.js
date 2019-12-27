@@ -20,7 +20,7 @@ export default () => (
       }
     `}
     render={data => (
-      <div>
+      <div className={styles.sideBar}>
         <div className={styles.tagTitleText}>Tag一覧</div>
         <ul>
           {data.allMarkdownRemark.group.map(tag => (

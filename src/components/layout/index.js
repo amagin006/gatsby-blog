@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import Footer from '../footer'
 import Header from '../header'
@@ -15,12 +15,13 @@ const Layout = ({ title, location, children }) => {
     hero = (
       <div className={styles.header_container}>
         <div className={styles.header_container__inner}>
-          <h2 className={styles.blog_title_area}>
+          {/* <h2 className={styles.blog_title_area}>
             <Link
               className={styles.blog_title}
               to={'/'}
             >LittleByLittle</Link>
-          </h2>
+          </h2> */}
+
         </div>
       </div>
     );
@@ -28,12 +29,10 @@ const Layout = ({ title, location, children }) => {
   return (
     <>
       <Header siteTitle={title} />
+      {hero}
       <div className={styles.bodyWrapper}>
-        {hero}
-        <div className={styles.bodyContainer}>
-          <main>{children}</main>
-          <aside><Sidebar /></aside>
-        </div>
+        <main>{children}</main>
+        <aside><Sidebar /></aside>
       </div>
       <Footer />
     </>

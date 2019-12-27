@@ -5,14 +5,17 @@ body {
 }
 
 .bodyWrapper {
-  margin: 0 auto;
+  margin: 20px auto 0;
   max-width: 1180px;
   padding: 0px 20px 16px;
-  padding-top: 0;
+  display: flex;
 }
 
-.bodyContainer {
-  display: flex;
+.bodyContainer {}
+
+.header_container {
+  background: url(../../../contents/images/IMGP5090.jpg) no-repeat center center/ cover;
+  height: 200px
 }
 
 main {
@@ -141,4 +144,10 @@ button:-moz-focusring,
     width: 30%;
   }
 
+}
+
+@media screen and (min-width: 768px) {
+  .bodyWrapper {
+    margin-top: 0px;
+  }
 }
