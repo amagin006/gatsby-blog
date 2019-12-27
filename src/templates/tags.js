@@ -5,13 +5,14 @@ import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby"
 const Tags = ({ pageContext, data }) => {
+  const { title } = data.site.siteMetadata
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
     } tagged with "${tag}"`
   return (
-    <div>
+    <Layout location={tag} title={title}>
       <h2>{tagHeader}</h2>
       <ul>
         {edges.map(({ node }) => {
@@ -25,7 +26,7 @@ const Tags = ({ pageContext, data }) => {
         })}
       </ul>
       <Link to="/tags">All tags</Link>
-    </div>
+    </Layout>
   )
 }
 Tags.propTypes = {
