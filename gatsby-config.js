@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `littlebylittle`,
     description: `Enjoing my life`,
-    siteUrl: `https://lucid-jones-cd2ff3.netlify.com/`,
+    siteUrl: `https://littlebylittle.work/`,
     author: `Peanuts`,
   },
   plugins: [
