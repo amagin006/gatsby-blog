@@ -12,7 +12,7 @@ Gatsbyでblogを書くのに便利なのがマークダウンで記事を書い�
 
 /src/pages/index.js
 
-```GraphQL
+```graphql:title=GraphQL
 export const query = graphql`
   query {
     allMarkdownRemark {

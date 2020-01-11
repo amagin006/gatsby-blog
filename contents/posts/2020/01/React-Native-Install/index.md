@@ -7,8 +7,8 @@ thumbnail: ./2020-01-10-10.png
 
 ### Expoインストール
 
-とにもかくにもExpoをインストール
-Node10 以上がはいっている
+とにもかくにもExpoをインストールします。  
+Node.jsが必要なのでv10以上を先にインストールしておきます。
 
 - PC - macOS Catalina 10.15.2
 - node - v10.16.2
@@ -19,7 +19,7 @@ Node10 以上がはいっている
 
 `npm install -g expo-cli`
 
-ついでにiphoneのアプリもApp Storeからダウンロードしておきましょう。
+ついでにiphoneのExpoアプリもApp Storeからダウンロードしておきましょう。
 登録はとくに必要なく使えます。
 
 ### プロジェクト作成
@@ -49,9 +49,9 @@ npmでもyarnどちらでもいいです。今回は`Y`でyarnを選択。
 
 ![Yarn選択](./2020-01-10-4.png)
 
-ちなみに`package.json`はこんな感じです
+ちなみに`package.json`はこんな感じです。
 
-```
+```json:title=package.json
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -75,7 +75,6 @@ npmでもyarnどちらでもいいです。今回は`Y`でyarnを選択。
   "private": true
 }
 ```
-
 
 `react-native`のdependencyがバージョン指定せずにExpoが管理しているということは自分でバージョンアップしなくていいということかな？
 最近は頻繁にバージョンアップもあるし、手動で結構エラーになっていたのでこれは楽かもしれない。
@@ -107,8 +106,7 @@ npmでもyarnどちらでもいいです。今回は`Y`でyarnを選択。
 せっかくなのでテキストを変更してみます。
 `App.js` の中身を変更します。このファイルが最初のエントリーポイントになります。
 
-```App.js
-
+```js:title=App.js
 〜〜〜
 export default function App() {
   return (
