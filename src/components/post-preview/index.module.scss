@@ -20,11 +20,13 @@
 
   .postContent {
 
-    h3 {
+    h3.title {
       margin: 10px 0;
       padding: 0;
       background: none;
       font-size: 1.7rem;
+      border: none;
+      line-height: 2rem;
     }
 
     p {
