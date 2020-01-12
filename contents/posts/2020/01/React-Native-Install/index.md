@@ -1,6 +1,6 @@
 ---
 title: 'React Native [expo]をインストールしてアプリを作成 入門'
-date: '2019-01-10'
+date: '2020-01-10'
 tags: ["React", "React Native", "Expo"]
 thumbnail: ./2020-01-10-10.png
 ---

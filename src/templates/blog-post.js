@@ -14,29 +14,31 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h2>{post.frontmatter.title}</h2>
-        <FontAwesomeIcon icon={faFlag} /><p className="post-date">
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <ul>
-          <li className="prev">
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li className="next">
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <div className="post-wrapper">
+          <SEO title={post.frontmatter.title} description={post.excerpt} />
+          <h2>{post.frontmatter.title}</h2>
+          <FontAwesomeIcon icon={faFlag} /><p className="post-date">
+            {post.frontmatter.date}
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr />
+          <ul>
+            <li className="prev">
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li className="next">
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </div>
       </Layout>
     )
   }
