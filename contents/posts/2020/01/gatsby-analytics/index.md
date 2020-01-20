@@ -76,6 +76,7 @@ module.exports = {
 #### 1.NetlifyにHostingしている場合
 
 GatsbyのサイトをNetlifyでHostingしている場合も多いかと思いますが、その場合はNetlify側のSettingで設定できます。
+NetlifyをGitHubのリポジトリと連携してる場合はこちらが簡単でいいと思います。
 
 まずNetilyにログインして自分のプロジェクトに入り`Setting`を選択。
 左側のメニューの`Build&develop`を選択、そして`Enviroment`を選択。
@@ -101,7 +102,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "GOOGLE_ANALYTICS_TRACKING_ID",
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
       },
     },
@@ -113,6 +114,8 @@ module.exports = {
 これで正常に動くはず。
 
 #### 2.configファイルで設定する場合
+
+以下2つはNetlifyをGitHubと連携せずにbuiltを直接あげる場合に有効だと思います。
 
 プロジェクトのroot直下に`data/siteConfig.js`を作成しそこでサイトのconfigを管理する方法です。
 
@@ -156,11 +159,11 @@ public
 yarn.lock
 ```
 
-これでpushしてもGitHubには反映されません。
+これでbuild時に読み込まれ、pushしてもGitHubには反映されません。
 
 #### 3. .envファイルに設定する場合
 
-.envファイルに環境変数としてトラッキングIDを保存しておく方法です。
+ローカルの .envファイルに環境変数としてトラッキングIDを保存しておく方法です。
 dotenvの説明は割愛しますがdevelopかbuildかによって環境を切り替えます。
 
 root直下に`.env.production`ファイルを作成。
