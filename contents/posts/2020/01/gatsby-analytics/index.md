@@ -184,4 +184,21 @@ GOOGLE_ANALYTICS_TRACKING_ID:UA-156470689-1
 .env.*
 ```
 
+こちらは上と一緒
+
+```javascript:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        head: true,
+      }
+    },
+    // 以下いろいろ設定省略
+  ]
+},
+```
+
 これでbuildの時に自動で読み込まれます。
