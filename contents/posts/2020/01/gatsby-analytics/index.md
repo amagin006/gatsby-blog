@@ -144,7 +144,7 @@ module.exports = {
 
 そして`.gitignore`ファイルに`.data/siteConfig.js`を追記。
 
-```:title=.gitignore
+```text:title=.gitignore
 .data/siteConfig.js
 node_modules/
 public
@@ -174,13 +174,13 @@ require("dotenv").config({
 
 dotenvを読み込んで`.env.production`にトラッキングIDを書き込みます。
 
-```:title=.env.production
+```text:title=.env.production
 GOOGLE_ANALYTICS_TRACKING_ID:UA-156470689-1
 ```
 
 .gitignoreにも追記します。
 
-```:title=.gitignore
+```text:title=.gitignore
 .env.*
 ```
 
