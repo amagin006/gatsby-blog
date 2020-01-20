@@ -32,6 +32,10 @@ h5 {
   color: #1a0dab;
 }
 
+.post-wrapper .gatsby-resp-image-wrapper {
+  margin: 20px 0;
+}
+
 li::before {
   content: '-';
   padding-right: 8px;
