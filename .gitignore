@@ -6,4 +6,5 @@ public
 .intermediate-representation/
 .cache/
 .env
+.env.*
 yarn.lock
