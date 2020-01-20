@@ -178,4 +178,10 @@ dotenvを読み込んで`.env.production`にトラッキングIDを書き込み�
 GOOGLE_ANALYTICS_TRACKING_ID:UA-156470689-1
 ```
 
+.gitignoreにも追記します。
+
+```:title=.gitignore
+.env.*
+```
+
 これでbuildの時に自動で読み込まれます。
