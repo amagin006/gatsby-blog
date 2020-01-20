@@ -173,9 +173,10 @@ require("dotenv").config({
 ```
 
 dotenvを読み込んで`.env.production`にトラッキングIDを書き込みます。
+前後中にスペースなどは入れないようにしてください。
 
 ```text:title=.env.production
-GOOGLE_ANALYTICS_TRACKING_ID:UA-156470689-1
+GOOGLE_ANALYTICS_TRACKING_ID:UA-XXXXXXXXX-1
 ```
 
 .gitignoreにも追記します。
