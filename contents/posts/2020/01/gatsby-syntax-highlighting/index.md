@@ -2,7 +2,7 @@
 title: 'Gatsbyにシンタックスハイライトを入れてコードをきれいに表示する'
 date: '2020-01-11'
 tags: ["Gatsby", "React"]
-thumbnail: ./2020-01-11-1.png
+thumbnail: ./2020-01-11-01.png
 ---
 
 ### まずやりたいこと
