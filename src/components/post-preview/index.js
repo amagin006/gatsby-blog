@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby'
 
+import Tags from '../../components/tags'
 import Image from '../image';
 import styles from './index.module.scss';
 
@@ -9,6 +10,7 @@ class PostPreview extends React.Component {
     const {
       slug,
       title,
+      tags,
       excerpt,
       thumbnail,
       date
@@ -25,8 +27,11 @@ class PostPreview extends React.Component {
             />
           </div>
           <div className={styles.postContent}>
-            <div className={styles.postDate}>{date}</div>
-            <h3 className={styles.title} >
+            <div>
+              <div className={styles.postDate}>{date}</div>
+              <Tags tags={tags} />
+            </div>
+            <h3 className={styles.title}>
               {title}
             </h3>
             <p

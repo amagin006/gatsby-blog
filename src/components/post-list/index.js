@@ -11,6 +11,7 @@ class Postlist extends React.Component {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         thumbnail: postEdge.node.frontmatter.thumbnail,
+        tags: postEdge.node.frontmatter.tags,
         excerpt: postEdge.node.excerpt,
         id: postEdge.node.id,
         slug: postEdge.node.fields.slug
