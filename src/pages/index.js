@@ -10,7 +10,7 @@ class BlogIndex extends React.Component {
   render() {
     return (
       <Layout title={this.props.data.site.siteMetadata.title} location={this.props.location}>
-        <SEO title="Home" />
+        <SEO title="Home" lang="ja"/>
         <PostList postEdges={this.props.data.allMarkdownRemark.edges} />
         <ul>
           {this.props.data.allMarkdownRemark.group.map(tag => (

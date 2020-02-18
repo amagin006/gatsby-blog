@@ -51,6 +51,7 @@ module.exports = {
               maxWidth: 590,
             },
           },
+          `gatsby-remark-static-images`,
           `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-prismjs`,
