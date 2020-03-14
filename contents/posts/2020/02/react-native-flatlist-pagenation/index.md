@@ -15,6 +15,9 @@ thumbnail: ./thumbnail01.png
 今回は以前iOSのNativeで作った個人開発のアプリをReact Nativeで書き直しています。
 そこでインスタグラムのようなUIで複数枚の写真を表示するのにページネーションをつけてみました。
 
+- expoSDK - "expo": "~36.0.0"
+- react-navigation - "^4.0.10",
+
 ちなみにこういうのもあるのですが、  
 [react-native-pagination](https://github.com/garrettmac/react-native-pagination#readme)  
 [react-native-dots-pagination](react-native-dots-pagination)  

@@ -13,11 +13,13 @@ Node.jsが必要なのでv10以上を先にインストールしておきます�
 - PC - macOS Catalina 10.15.2
 - node - v10.16.2
 - yarn - v1.21.0
-- expo - 3.11.5
+- expoSDK - ~36.0.0,
 
 コマンドを入力
 
 `npm install -g expo-cli`
+
+- expo-cli - 3.11.5
 
 ついでにiphoneのExpoアプリもApp Storeからダウンロードしておきましょう。
 登録はとくに必要なく使えます。
