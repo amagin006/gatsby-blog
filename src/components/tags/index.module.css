@@ -1,0 +1,21 @@
+.tagDefalut {
+  display: inline-block;
+  padding: 1px 4px;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  border-radius: 4px;
+  background-color: #f79f9f;
+}
+
+.react {
+  background-color: #e2a0ff;
+}
+
+.gatsby {
+  background-color: #9fcef7;
+}
+
+.react_native {
+  background-color: #eef7c0;
+}
+/*# sourceMappingURL=index.module.css.map */

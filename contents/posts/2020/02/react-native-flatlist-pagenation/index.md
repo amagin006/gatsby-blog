@@ -7,7 +7,8 @@ thumbnail: ./thumbnail01.png
 
 今回は意外にも簡単にReact Nativeでinstagramみたいなページネーションを実装できたので残しておきます。
 
-###　今回やりたかったこと
+### 今回やりたかったこと
+
 こちらが完成品
 
 ![pagenationのgif](./pagenation1.gif)

@@ -1,0 +1,65 @@
+.postBlock {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0 0 20px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid #cecece;
+}
+
+.postBlock:hover {
+  background: #f2f2f2;
+}
+
+.postBlock .postTumbnailBox {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.postBlock .postTumbnailBox img {
+  width: 100%;
+}
+
+.postBlock .postContent h3.title {
+  margin: 10px 0;
+  padding: 0;
+  background: none;
+  font-size: 1.7rem;
+  border: none;
+  line-height: 2rem;
+}
+
+.postBlock .postContent p {
+  font-size: 1.2rem;
+  color: #8e8e8e;
+}
+
+.postBlock .postDate {
+  font-size: 1.3rem;
+  color: #8e8e8e;
+}
+
+@media screen and (min-width: 600px) {
+  .postBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+  .postBlock .postTumbnailBox {
+    width: 30%;
+    margin-right: 3%;
+  }
+  .postBlock .postTumbnailBox img {
+    width: 100%;
+  }
+  .postBlock .postContent {
+    width: 67%;
+    padding-right: 10px;
+  }
+  .postBlock .postContent h3 {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=index.module.css.map */

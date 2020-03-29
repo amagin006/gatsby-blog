@@ -1,0 +1,155 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
+}
+
+.bodyWrapper {
+  margin: 20px auto 0;
+  max-width: 1180px;
+  padding: 0px 20px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_container {
+  background: url(../../../contents/images/IMGP5090.jpg) no-repeat center center/cover;
+  height: 200px;
+}
+
+main {
+  display: block;
+  width: 100%;
+  margin-right: 0;
+}
+
+aside {
+  display: none;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #333333;
+}
+
+li {
+  list-style: none;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    width: 67%;
+    margin-right: 3%;
+  }
+  aside {
+    display: block;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bodyWrapper {
+    margin-top: 0px;
+  }
+}
+/*# sourceMappingURL=layout.module.css.map */
