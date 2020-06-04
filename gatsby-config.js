@@ -11,7 +11,7 @@ module.exports = {
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
-      }
+      },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
@@ -30,8 +30,13 @@ module.exports = {
         name: `posts`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -56,14 +61,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
             },
           },
-          `gatsby-remark-responsive-iframe`
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },
@@ -83,7 +88,7 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      }
+      },
     },
   ],
-}
+};

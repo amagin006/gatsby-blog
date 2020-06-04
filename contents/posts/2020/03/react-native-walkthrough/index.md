@@ -2,7 +2,7 @@
 title: 'React Nativeのモーダルで初回のイントロページを作る'
 date: '2020-03-15'
 tags: ["React Native", "Expo"]
-thumbnail: ./thumbnail02.png
+thumbnail: ./thumbnail0315.png
 ---
 
 React Nativeでアプリが初回開かれた時に現れる初回のページを作成します。  

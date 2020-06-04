@@ -2,7 +2,7 @@
 title: 'React NativeのFlatlistでinstgramみたいなpagenaitionをつくる'
 date: '2020-02-17'
 tags: ["React Native", "Expo"]
-thumbnail: ./thumbnail01.png
+thumbnail: ./thumbnail0217.png
 ---
 
 今回は意外にも簡単にReact Nativeでinstagramみたいなページネーションを実装できたので残しておきます。

@@ -2,7 +2,7 @@
 title: 'React NativeでHeaderの戻るボタンのタイトルを消す'
 date: '2020-03-14'
 tags: ["React Native", "Expo"]
-thumbnail: ./thumbnail01.png
+thumbnail: ./thumbnail0314.png
 ---
 
 
