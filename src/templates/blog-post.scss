@@ -39,7 +39,9 @@ h5 {
 
 li::before {
   content: '-';
-  padding-right: 8px;
+  padding-right: 5px;
+  margin-left: -16px;
+  text-indent: 0px;
   color: #3c3c3c;
 }
 
@@ -72,7 +74,10 @@ pre[class*='language-'] {
   font-size: 1.4rem;
   padding: 2px 8px 3px 8px;
   margin: 0 4px;
-  background-color: #3c3c3c;
+  line-height: 3.4rem;
+  background-color: #e4e4e4;
+  border: 1px solid #e6e6e6;
+  color: #000;
 }
 
 .gatsby-code-title {

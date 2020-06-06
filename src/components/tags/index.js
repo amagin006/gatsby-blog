@@ -15,6 +15,9 @@ const Tags = ({ tags }) => {
         case 'React Native':
           tagClass = styles.react_native;
           break;
+        case 'VSCode':
+          tagClass = styles.vscode;
+          break;
         default:
           break;
       }

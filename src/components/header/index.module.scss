@@ -1,19 +1,39 @@
 .header {
   background-color: #a4cc89;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .headerWrapper {
   max-width: 1180px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .title {
   font-size: 3rem;
-  padding: 16px;
+  padding: 16px 0 0 0;
   margin-bottom: 0;
-
   a {
+    font-family: 'Josefin Sans', sans-serif;
     color: #fff;
+  }
+}
+
+.subTitle {
+  color: #fff;
+  font-size: 1.6rem;
+  padding-bottom: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .headerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .subTitle {
+    margin-left: 30px;
   }
 }

@@ -17782,6 +17782,16 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-josefin-sans@^0.0.75:
+  version "0.0.75"
+  resolved "https://registry.yarnpkg.com/typeface-josefin-sans/-/typeface-josefin-sans-0.0.75.tgz#15e26410172c47bf112aa8fb7d29e887f2344d50"
+  integrity sha512-cmpBiO2kUYQVeTvnG4zF3ZVplc+3tND4u4FtoFZqgs9iYwqd26aG7RC8u4YaeL8BgEL1AM4TCMM1/hF+4xSX8Q==
+
+typeface-kosugi-maru@^0.0.61:
+  version "0.0.61"
+  resolved "https://registry.yarnpkg.com/typeface-kosugi-maru/-/typeface-kosugi-maru-0.0.61.tgz#356acdacab4c55b1376e07c090704be0c5d8a250"
+  integrity sha512-F08uXVyTEbW//wGkNngo+CnksIDq3OOvL7XWoeye65mhxCnfqgXG4PTl3jXDVmGYd0qNLRrXiOWpBAoxPPGvuQ==
+
 typeface-rubik@^0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-rubik/-/typeface-rubik-0.0.72.tgz#85d028dc66e8388a941f8c7ce194fad963d1824e"

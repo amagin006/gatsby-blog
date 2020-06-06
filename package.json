@@ -34,6 +34,7 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "to": "^0.2.9",
+    "typeface-josefin-sans": "^0.0.75",
     "typeface-rubik": "^0.0.72",
     "typography": "^0.16.19",
     "update": "^0.7.4"
