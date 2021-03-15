@@ -18,6 +18,10 @@ const Tags = ({ tags }) => {
         case 'VSCode':
           tagClass = styles.vscode;
           break;
+        case 'PC全般':
+          console.log('tag----------', tag);
+          tagClass = styles.pc;
+          break;
         default:
           break;
       }
