@@ -5,9 +5,9 @@ tags: ['React Native']
 thumbnail: ./thumbnail20210912.png
 ---
 
+複数のテーマをアプリ起動中に動的に変更したい。しかもランタイムで。
+いちいちアプリを立ち上げなおしたくないし、Dark mode,Light mode以外も入れれたら最高かも。
 ### 今回やりたかったこと
-
-複数のテーマをアプリ起動中に動的に変更したい。
 そしてできたサンプルが下の画像です。
 
 ![完成図](./theme-introduce_1.gif)
@@ -29,11 +29,13 @@ ReactNative のアプリで theme を入れるのは複数の方法があると�
 - できるだけ Theme の定義は一つにまとめたい。
 - このためだけにライブラリは入れたくない。
 - 複数の Theme をもちたい。
+- ランタイムで変更
+- パフォーマンスやパッケージサイズも注意
 
 そんな感じで自作してみます。
 ちなみにこちらの[海外の記事](https://medium.com/supercharges-mobile-product-guide/reactive-styles-in-react-native-79a41fbdc404)を参考に少し手を加えてます。
 
-#### 色の定義
+### 色の定義
 
 まずそれぞれのテーマのカラーを定義します。
 
@@ -121,8 +123,9 @@ export const DEFAULT_ORANGE_THEME: Theme = {
 };
 ```
 
+ここでThemeはidとcolorとspacingを定義しています。
 ここで気をつけたのはカラーとスペースの定義を分けたことです。
-Theme を宣言する他の例をいくつか探しましたが、結構一緒に Theme としてカラーとスペースやフォントなどを一つにまとめてるものをよく見かけましたが、Theme が変わってもレイアウトのスペースやフォントが変わるとは考えにくいので別で一つに集約しています。
+Theme を宣言する他の例をいくつか探しましたが、一緒に Theme としてカラーとスペースやフォントなどを一つにまとめてるものをよく見かけました。Theme が変わってもレイアウトのスペースやフォントが変わるとは考えにくいので別で一つに集約しています。
 
 ちなみにスペースはこんな感じ。
 ```javascript:title=src/style/space/DefaultSpacing.ts
@@ -138,7 +141,7 @@ export const DEFAULT_SPACING_THEME: SpacingTheme = {
 ```
 font も別でまとめて定義しておいてThemeに読み込んでおくのがいいと思います。
 
-#### Theme Context の作成
+### Theme Context の作成
 
 Theme の情報は Context API でグローバルに保持しておきます。
 
@@ -232,10 +235,10 @@ export default App;
 ```
 
 
-#### Screen を作る
+### Screen を作る
 Screen OneとScreen two の２つを用意しました。
 
-```javascript:title:src/screens/ScreenOne.tsx
+```javascript:title=src/screens/ScreenOne.tsx
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {EThemeID, Theme} from '../style/type';
@@ -316,7 +319,7 @@ const createStyles = (theme: Theme) => {
 
 ```
 
-```javascript:title:src/screens/ScreenTwo.tsx
+```javascript:title=src/screens/ScreenTwo.tsx
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {useThemeAwareObject} from '../style/ThemeHooks';
@@ -379,11 +382,14 @@ const createStyles = (theme: Theme) => {
 ```
 
 これでだいぶ出来てきました。
+
 ただしこれではComponentがre-renderされるたびにcreateStylesが呼び出されてstyleのオブジェクトが毎回生成されます。
+
 たまに他のサイトでThemeのExampleを見かけますが、componentの中で毎回styleのオブジェクトを作成しているのもあります。
+
 Re-rendeのたびに毎回新しいオブジェクトが生成されるのでコンポーネントの数が増えるとアプリのパフォーマンスにかかわります。
 
-#### Custom hookを作成
+### Custom hookを作成
 最適化のためにカスタムフックを作ります。
 re-renderが走ったときになんども新しいオブジェクトを作るのを防ぎます。
 
@@ -409,11 +415,16 @@ export {useThemeAwareObject};
 
 ```
 
-このカスタムフックの中でstyleを作成するのですがmemoしているので返ってくるオブジェクトは何度re-rendringが入っても常に同じでファンクションも発火しません。即座にmemoの内容を返すので何度もオブジェクトが生成されることはありません。
+このカスタムフックの中でstyleを作成するのですが、memoしているので返ってくる同じです。
+
+何度re-rendringが入っても即座にmemoの内容を返すので何度もオブジェクトが生成されることはありません。
 
 あとはそれぞれのスクリーンでこのカスタムフックを呼び込むだけ。どれだけcomponentがre-renderされてもstyleは最初の一回きりの作成になります。
 
-#### 完成
+### 完成
+
+使い方はいたって簡単。
+
 ```javascript:title=src/Screens/ScreenOne.tsx
 export const ScreenOne: React.FC<{navigation: any}> = ({navigation}) => {
   // custom Hookを呼び出してstyleを作成
@@ -438,7 +449,7 @@ const createStyles = (theme: Theme) => {
 ```javascript:title=src/Screens/ScreenTwo.tsx
 export const ScreenOne: React.FC<{navigation: any}> = ({navigation}) => {
   // custom Hookを呼び出してstyleを作成
-  // styleだけでthemeを変更するtoggleはこのページでは使わない
+  // 必要なのはstyleだけでthemeを変更するtoggleはこのページでは使わない
   const {styles} = useThemeAwareObject(createStyles);
 
   return (
@@ -481,8 +492,8 @@ src/
       ┣━ space
       ┃   ┗━ DefaultSpacing.ts 
       ┣━ ThemeContext.tsx
-      ┣━ type.ts 
-      ┗━ ThemeHooks.tsx
+      ┣━ ThemeHooks.tsx
+      ┗━ type.ts 
 ```
 
 あとは実際にパフォーマンスに問題ないかちゃんとしたアプリで計測して見ないとわかりません。
