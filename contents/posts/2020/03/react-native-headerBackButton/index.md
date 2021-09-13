@@ -1,12 +1,11 @@
 ---
-title: 'React NativeでHeaderの戻るボタンのタイトルを消す'
+title: 'React NativeでHeaderの戻るボタンのタイトルを消す ReactNavigationv4'
 date: '2020-03-14'
-tags: ["React Native", "Expo"]
+tags: ['React Native', 'Expo']
 thumbnail: ./thumbnail0314.png
 ---
 
-
-React NativeでHeaderのバックボタンの表示を消したい。もしくは任意の名前に変えたい。
+React Native で Header のバックボタンの表示を消したい。もしくは任意の名前に変えたい。
 
 - expoSDK - "expo": "~36.0.0"
 - react-navigation - "^4.0.10",
@@ -16,25 +15,25 @@ React NativeでHeaderのバックボタンの表示を消したい。もしく�
 
 ![headerBackButton](./headerBackButton1.png)
 
-### navigationOptionの設定
+### navigationOption の設定
 
-このヘッダーはcreateStackNavigatorでscreenをstackして重ねていった時に表示されます。
-なのでstackNavigatorの設定もしくはそのscreenでnavigationOptionの設定をしてやります。
+このヘッダーは createStackNavigator で screen を stack して重ねていった時に表示されます。
+なので stackNavigator の設定もしくはその screen で navigationOption の設定をしてやります。
 
 ```javascript:title=Navigator.js
 const homeStackNavigator = createStackNavigator(
   {
-    home: {screen: homeScreen},
-    screen2: {screen: screen2},
-    screen3: {screen: screen3},
+    home: { screen: homeScreen },
+    screen2: { screen: screen2 },
+    screen3: { screen: screen3 },
   },
   {
     initialRouteName: 'home',
-    defaultNavigationOptions:{
-       headerBackTitleVisible: false,
-    }
+    defaultNavigationOptions: {
+      headerBackTitleVisible: false,
+    },
   }
-)
+);
 ```
 
 `headerBackTitleVisible` を `false` にするだけ。
@@ -46,35 +45,35 @@ const homeStackNavigator = createStackNavigator(
 
 ちなみに個別のページで設定する場合。
 
-class Componentの場合はstaticでnavigationの設定をしてあげます。
+class Component の場合は static で navigation の設定をしてあげます。
 
 ```javascript:title=screen1.js
 class Screen1 extends React.Component {
   static navigationOptions = () => ({
-    title: "Screen1",
+    title: 'Screen1',
     headerBackTitleVisible: true,
   });
   // ...以下略
 }
 ```
 
-functional Componentの場合はComponentにnavigationの設定をしてあげます。
+functional Component の場合は Component に navigation の設定をしてあげます。
 
 ```javascript:title=screen1.js
 const Screen1 = () => {
   // ...以下略
-}
+};
 
 Screen1.navigationOptions = () => ({
-  title: "Screen1",
+  title: 'Screen1',
   headerBackTitleVisible: true,
 });
 
 export default Screen1;
 ```
 
-この時にNavigation.jsなどで`defaultNavigationOptions`を有効にしているとそちらが優先されますので反映されません。
-なのでdefaultを切って設定します。
+この時に Navigation.js などで`defaultNavigationOptions`を有効にしているとそちらが優先されますので反映されません。
+なので default を切って設定します。
 
 ### その他
 
