@@ -2,7 +2,7 @@
 title: 'React NativeのDark modeなど複数のThemeを動的に変更'
 date: '2021-09-12'
 tags: ['React Native']
-thumbnail: ./thumbnail0314.png
+thumbnail: ./thumbnail20210912.png
 ---
 
 ### 今回やりたかったこと
